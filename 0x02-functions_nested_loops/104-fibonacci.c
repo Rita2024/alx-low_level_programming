@@ -1,21 +1,28 @@
 #include <stdio.h>
-/**
- * main - prints the first 98 fibonacci numbers, starting with 1 and 2
- * Return: 0
- */
 
+/**
+ * main - Prints the add of the even-valued
+ * fibonacci numbers.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	a = 1
-	b = 2
-	count = 2
-	print(a, end=", ")
-	print(b, end=", ")
-	while count < 98:
-    	c = a + b
-    	print(c, end=", ")
-    	a = b
-    	b = c
-    	count += 1
-	print(a + b)
+	long int n1, n2, fn, afn;
+
+	n1 = 1;
+	n2 = 2;
+	fn = afn = 0;
+	while (fn <= 4000000)
+	{
+		fn = n1 + n2;
+		n1 = n2;
+		n2 = fn;
+		if ((n1 % 2) == 0)
+		{
+			afn += n1;
+		}
+	}
+	printf("%ld\n", afn);
+	return (0);
 }
