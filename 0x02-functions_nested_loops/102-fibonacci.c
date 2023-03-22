@@ -12,7 +12,7 @@ int main(void)
 	while (p < 50)
 	{
 		if (p == 0)
-			printf("%ld", j);
+			printf(", %ld", j);
 		else if (p == 1)
 			printf(", %ld", k);
 		else
