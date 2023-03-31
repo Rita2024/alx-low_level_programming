@@ -14,7 +14,7 @@ void print_buffer(char *b, int size)
 
 	for (byte = 0; byte < size; byte += 10)
 	{
-		printf("%08d:", byte);
+		printf("%08x:", byte);
 
 		for (index = 0; index < 10; index++)
 		{
@@ -22,7 +22,7 @@ void print_buffer(char *b, int size)
 				printf(" ");
 
 			else
-				printf("%02d", *(b + index + byte));
+				printf("%02x", *(b + index + byte));
 
 			if ((index % 2) != 0 && index != 0)
 				printf(" ");
