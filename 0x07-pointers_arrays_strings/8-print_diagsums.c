@@ -10,13 +10,16 @@
 
 void print_diagsums(int *a, int size)
 {
-	int x, sum1 = 0, sum2 = 0;
+	int x, y, sum1 = 0, sum2 = 0;
 
-	for (x = 0; x < size; x++)
+	for (x = 0; x <= (size * size); x = x + size + 1)
 	{
-		sum1 += *(a + x * size + x);
-		sum2 += *(a + x * size + (size - x - 1));
+		sum1 = sum1 + a[x];
 	}
-	printf("sum of diagonal 1: %d\n", sum1);
-	printf("sum of diagonal 2: %d\n", sum2);
+
+	for (y = size - 1; y <= (size * size) - size; y = y + size - 1)
+	{
+		sum2 = sum2 + a[y];
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
