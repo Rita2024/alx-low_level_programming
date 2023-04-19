@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	char *arg = (char *)main;
-	int e, nbytes;
+	int e, bytes;
 
 	if (argc != 2)
 	{
@@ -19,23 +19,22 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	nbytes = atoi(argv[1]);
+	bytes = atoi(argv[1]);
 
-	if (nbytes < 0)
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (e = 0; e < nbytes; ++e)
+	for (e = 0; e < bytes; ++e)
 	{
-		if (e == nbytes - 1)
-		{
-			printf("%02hx\n", arg[e]);
-			break;
-		}
-		printf("%2hx", arg[e]);
+		printf("%02hx", arg[e] & 0xFF);
+		if (e != bytes - 1)
+			printf(" ");
 	}
+
+	printf("\n");
 
 	return (0);
 }
