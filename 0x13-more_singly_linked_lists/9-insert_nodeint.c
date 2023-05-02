@@ -10,16 +10,15 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int x = 0;
+	unsigned int x;
 	listint_t *tmp = *head;
 	listint_t *new_node;
 
 	if (idx != 0)
 	{
-		while (tmp != NULL && x < idx)
+		for (x = 0; x < idx && tmp != NULL; ++x)
 		{
 			tmp = tmp->next;
-			x++;
 		}
 	}
 
