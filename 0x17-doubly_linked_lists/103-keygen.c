@@ -35,7 +35,9 @@ int f4(char *usrn, int len)
 
 int f5(char *usrn, int len)
 {
-	int i, j = 0;
+	int i, j;
+
+	i = j = 0;
 
 	while (j < len)
 	{
@@ -53,7 +55,9 @@ int f5(char *usrn, int len)
 
 int f6(char *usrn)
 {
-	int i, j = 0;
+	int i, j;
+
+	i = j = 0;
 
 	while (j < *usrn)
 	{
@@ -73,13 +77,13 @@ int f6(char *usrn)
 int main(int argc, char **argv)
 {
 	char keygen[7];
-	int len, j = 0;
-	int i;
+	int len, i, j;
 	long alph[] = {
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
 		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
 		0x723161513346655a, 0x6b756f494b646850 };
 	(void) argc;
+	i = j = 0;
 
 	for (len = 0; argv[1][len]; len++)
 		;
